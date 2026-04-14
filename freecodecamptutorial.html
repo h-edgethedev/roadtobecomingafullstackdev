@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back to HTML</title>
+    <link rel="stylesheet" href="freecodecampstyle.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hello World</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#html">Learning HTML</a></li>
+                <li><a href="#mygoals">Planning a vacatio n</a></li>
+            </ul>
+        </nav>
+        <a href="#contact">Contact Me</a>
+    </header>
+    <hr>
+    <article id="html" aria-label="primary-navigation">
+        <p>My goals for the next 10 years.</p>
+        <h2>This is actually not my first site</h2>
+        <img src="Images/960px-HTML5_logo_and_wordmark.svg (1).png" alt="HTML5 logo" width="350" height="300">
+        <p>Let me tell you how:
+            <br>&nbsp&nbsp...I learn more about web dev.
+            <br>&nbsp&nbsp...I plan out my schedule.
+            <br>&nbsp&nbsp...I use resources from <a href="https://developer.mozilla.org/en-US/">MDN</a>
+        </p>
+        <details>
+            <summary>Guess the <mark> numbers of hours </mark>I code per day</summary>
+            <p>I start as early as 1am sometimes and make sure I code up to 4-5hrs a day</p>
+        </details>
+    </article>
+
+    <hr>
+    <br>
+    <table>
+        <caption>My Daily Schedule</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Activity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <time datetime="08:00">8am</time>-
+                    <time datetime="11:00">11am</time>
+                </td>
+                <td>
+                    Write Code
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <time datetime="12:00">12pm</time>-
+                    <time datetime="14:00">2pm</time>
+                </td>
+                <td>
+                    Watch Movies
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <time datetime="15:00">5pm</time>-
+                    <time datetime="19:00">7pm</time>
+                </td>
+                <td>
+                    Study for other courses
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">All other times</td>
+                <td>Free Time</td>
+            </tr>
+            <tr>
+                <td>Sleep</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    And that's what I do everyday, 5 days a week, Just eat, sleep, code and read
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <section id="places">
+        <p>Places I'd love to visit:</p>
+        <ul>
+            <li>
+                <figure>
+                    <p>I've kinda seen London a lot in movies</p>
+                    <img src="Images/london.avif" alt="London's image" width="400" height="225"
+                        title="I want to visit the London" loading="lazy">
+                    <figcaption>
+                        A nice image of London
+                    </figcaption>
+                </figure>
+            </li>
+            <li>
+                <p>Crazily I think I'm also dying to go to Seattle</p>
+                <figure><img src="Images/seattle.avif" alt="An image of Seattle" width="400" height="225"
+                        title="I want to visit Seattle">
+                    <figcaption>A beautiful image of Seattle</figcaption>
+                </figure>
+            </li>
+            <li>
+                <p>Here's also an amazing image of NYC</p>
+                <figure>
+                    <img src="Images/Nyc.avif" alt="A beautiful image of London" height="225" width="400"
+                        loading="lazy">
+                    <figcaption>Here's a detailed image of New York City</figcaption>
+                </figure>
+            </li>
+            <li></li>
+        </ul>
+    </section>
+
+    <div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quidem hic, accusantium ut natus itaque
+            accusamus, voluptatem sapiente facere vero corrupti esse aspernatur, animi tempora ad amet dignissimos neque
+            soluta?</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quae nam soluta architecto, esse veniam modi,
+            enim sapiente hic ad vitae corrupti! Provident aspernatur consequatur reprehenderit earum hic laborum
+            adipisci.</h3>
+    </div>
+    <hr>
+    <section id="mygoals">
+        <h1>I'll love to own my own AI intelligence firms</h1>
+        <p>I've been working so hard and I'm sure God will crown my efforts with success</p>
+        <p>So which services are we gonna offer:</p>
+        <ul>
+            <li>Web development services</li>
+            <li>AI engineering services</li>
+            <li>Proferring AI solutions</li>
+            <li>AI powered cybersecurity</li>
+            <li>Artificial intelligence in Agriculture</li>
+            <hr>
+            <p>About me: </p>
+            <h4>My name is Heritage and I'm a student of <abbr title="University of Lagos">UNILAG</abbr></h4>
+            <hr>
+            <article id="contact">
+                <h2>Contact Me</h2>
+                <p>I'd really like to hear from you</p>
+                <form action="https:httpbin.org/get" , method="get">
+                    <fieldset>
+                        <p>
+                            <label for="firstName">First Name:</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="e'g Janet" autocomplete="on"
+                                required autofocus>
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="e'g Adebanjo"
+                                autocomplete="on" required>
+                        </p>
+                        <p>
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" name="phone" id="phone" placeholder="+234 123-456-8918"
+                                pattern="[+234] [0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        </p>
+                        <p>
+                            <label for="decade">Favorite Decade</label>
+                            <input type="number" name="decade" id="decade" min="1950" max="2026" step="10" ,
+                                value="1980">
+                        </p>
+                        <label for="Coffee">Favorite Coffee</label>
+                    </fieldset>
+                    <fieldset>
+                        <select name="coffee" id="coffee">
+                            <optgroup label="Coffees">
+                                <option value="regular cofee">Regular Coffee</option>
+                                <option value="iced coffee">Iced Coffee</option>
+                            </optgroup>
+                            <optgroup label="Espresso Drinks">
+                                <option value="latte">Latte</option>
+                                <option value="cappuccino">Cappuccino</option>
+                                <option value="americano">Americano</option>
+                                <option value="nescafe">Nescafe</option>
+                            </optgroup>
+                            <option value="other">Other</option>
+                        </select>
+                            <legend>What is your favorite food: </legend>
+                            <p>
+                                <input type="radio" name="food" id="tacos" value="tacos">
+                                <label for="tacos">Tacos</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="food" id="pizza" value="pizza">
+                                <label for="pizza">Pizza</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="food" id="shawarma" value="shawarma">
+                                <label for="shawarma">Shawarma</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="food" id="other" value="other">
+                                <label for="other">Other</label>
+                            </p>
+                    </fieldset>
+                </form>
+            </article>
+            <hr>
+            &lt&lt&lt&copyH~EDGE-Studios&gt&gt&gt
+            <h3><a href="tel: +2349028713276">Dial</a></h3>
+            <a href="Logic gates.pdf" download>Click here to download pdf </a>
+            <br> <br>
+            <a href="#">Back to Top</a>
+
+    </section>
+</body>
+
+</html>
