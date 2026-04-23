@@ -1,0 +1,17 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* input, button{
+    font: inherit;
+} */
+
+p {
+    text-indent: 2em;
+    font-family: "Playwrite NZ Guides";
+    font-weight: 400;
+    font-style: normal;
+}
