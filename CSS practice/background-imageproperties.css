@@ -1,0 +1,13 @@
+body {
+    background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+    background-position: center top;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    width: 75%;
+    font-size: 1.5rem;
+}
+
