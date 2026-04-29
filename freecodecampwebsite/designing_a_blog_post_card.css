@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+SAS:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mogra&display=swap');
+
 body{
     background-color: chocolate;
 }
@@ -34,17 +37,22 @@ body{
     margin-top: 14px;
 }
 
-.read-more{
+.read-more, .read-more:visited, .read-more:active{
     color: whitesmoke;
     background-color: dodgerblue;
     padding: 15px;
     /* margin-top: 500px; */
     border-radius: 16px;
     display: inline-block;
+    transform: scale(1.07);
+    transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .read-more:hover{
     opacity: 0.7;
-    transition: transform 0.3s ease;
-    
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+    font-family: "mogra", cursive;
+    font-size: 1.2rem;
 }
