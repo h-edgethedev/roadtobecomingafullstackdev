@@ -95,7 +95,7 @@
 // console.log(calculateProduct(13, 5))
 
 // function calculateQuotient(num1, num2){
-    
+
 //     if (num1 ===0 || num2===0){
 //         return "Error Division by zero"
 //     }
@@ -181,22 +181,79 @@
 //     return farenheit
 // }
 
-let count= 0
+// let count= 0
+// function cardCounter(param){
+//     if (param===2 || param===3 || param===4 || param===5 || param===6){
+//         count++;
+//     }
+//     else if(param=="J" || param=="Q" || param=="K" || param=="A" || param== 10){
+//         count--
+//     }
+//     if(count>=1){
+//         return `${count} Bet`
+//     }
+//     else{
+//         return `${count} Hold`
+//     }
+// }
+// cardCounter(2)
+// cardCounter(2)
+// console.log(cardCounter(10))
+// var year= 2024
+// function isLeapYear(param){
+//     var year = param
+//     if((year%4== 0 && year%100!=0) || year%400==0){
+//         return `${year} is a leap year.`
+//     }
+//     else{
+//         return `${year} is not a leap year.`
+//     }
+// }
 
-function cardCounter(param){
-    if (param===2 || param===3 || param===4 || param===5 || param===6){
-        count++;
-    }
-    else if(param=="J" || param=="Q" || param=="K" || param=="A" || param== 10){
-        count--
-    }
-    if(count>=1){
-        return `${count} Bet`
-    }
-    else{
-        return `${count} Hold`
-    }
-}
-cardCounter(2)
-cardCounter(2)
-console.log(cardCounter(10))
+// var result= isLeapYear(year)
+// console.log(result)
+
+var name = "HeritageOluwanifemiBarber"
+// function truncateString(string, number){
+//     var lengthOfString= string.length
+//     if (lengthOfString<=number){
+//         return string
+//     }
+//     else{
+//         return`${string.slice(0, number)}...`
+//     }
+// }
+// console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8))
+
+// function confirmEnding(string1, string2){
+//     if(string1.slice(-string2.length)===string2){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+// }
+
+// console.log(confirmEnding("Bastian", "n"))
+
+// // Arrays
+
+var array = ["mango", "cherry", "watermelon"]
+array[1] = "banana"
+console.log(array)
+array.push("Strawberry")
+array.push("orange")
+console.log(array)
+
+console.log(array.pop(0))
+console.log(array.unshift("Blueberry"))
+array.push("pawpaw")
+array.push("pineapple")
+array.push("Agbalumo")
+console.log(array)
+
+var [first, second, third, ...rest]= array
+console.log(first)
+console.log(second)
+console.log(third)
+console.log(rest)
