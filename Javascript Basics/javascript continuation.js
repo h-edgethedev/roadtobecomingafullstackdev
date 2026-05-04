@@ -238,22 +238,57 @@ var name = "HeritageOluwanifemiBarber"
 
 // // Arrays
 
-var array = ["mango", "cherry", "watermelon"]
-array[1] = "banana"
-console.log(array)
-array.push("Strawberry")
-array.push("orange")
-console.log(array)
+// var array = ["mango", "cherry", "watermelon"]
+// array[1] = "banana"
+// console.log(array)
+// array.push("Strawberry")
+// array.push("orange")
+// console.log(array)
 
-console.log(array.pop(0))
-console.log(array.unshift("Blueberry"))
-array.push("pawpaw")
-array.push("pineapple")
-array.push("Agbalumo")
-console.log(array)
+// console.log(array.pop(0))
+// console.log(array.unshift("Blueberry"))
+// array.push("pawpaw")
+// array.push("pineapple")
+// array.push("Agbalumo")
+// console.log(array)
 
-var [first, second, third, ...rest]= array
-console.log(first)
-console.log(second)
-console.log(third)
-console.log(rest)
+// var [first, second, third, ...rest]= array
+// console.log(first)
+// console.log(second)
+// console.log(third)
+// console.log(rest)
+
+// var name= "BarberHeritageOluwanifemi"
+// var charArray= name.split("")
+// var reversedArray= charArray.reverse()
+// let reversedName= reversedArray.join("")
+// console.log(reversedName)
+
+// console.log("Grocery Shopping List")
+
+// var shoppingList= []
+// console.log("It will be nice to have some fruit to eat.")
+// shoppingList.push("Apples")
+// function getShoppingListMsg(array){
+//     return `Current Shopping List: ${array.join(", ")}`
+// }
+
+// console.log(getShoppingListMsg(shoppingList))
+// shoppingList.push("Grapes")
+// console.log(getShoppingListMsg(shoppingList))
+// console.log("It looks like we need to get some cooking oil.")
+// shoppingList.unshift("Vegetable Oil")
+// console.log(getShoppingListMsg(shoppingList))
+// shoppingList.push("Popcorn", "Beef Jerky", "Potato Chips")
+// console.log(getShoppingListMsg(shoppingList))
+// console.log("This looks like too much junk food.")
+// shoppingList.pop()
+// console.log(getShoppingListMsg(shoppingList))
+// console.log("It might be nice to get a dessert.")
+// shoppingList.unshift("Chocolate Cake")
+// console.log(getShoppingListMsg(shoppingList))
+// console.log("On second thought, maybe we should be more health conscious.")
+// shoppingList.shift()
+// shoppingList[0]= "Canola Oil"
+// console.log(getShoppingListMsg(shoppingList))
+
