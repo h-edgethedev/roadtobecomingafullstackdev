@@ -292,3 +292,73 @@ var name = "HeritageOluwanifemiBarber"
 // shoppingList[0]= "Canola Oil"
 // console.log(getShoppingListMsg(shoppingList))
 
+var lunches= []
+function addLunchToEnd(array, lunchItem){
+    array.push(lunchItem);
+    console.log(`${lunchItem} added to the end of the lunch menu.`)
+    return array;
+}
+
+addLunchToEnd(lunches, "Fried rice")
+console.log(lunches)
+
+function addLunchToStart(array, lunchItem){
+    array.unshift(lunchItem)
+    console.log(`${lunchItem} added to the start of the lunch menu.`)
+    return array
+}
+
+function removeLastLunch(array){
+    if (array.length > 0){
+        var lastLunchItem= array[array.length-1]
+        array.pop()
+        console.log(`${lastLunchItem} removed from the end of the lunch menu.`)
+        return array
+    }
+    else{
+        console.log(`No lunches to remove`)
+        return array
+    }
+}
+function removeFirstLunch(array){
+    if(array.length>0){
+        var firstItem= array[0]
+        array.shift()
+        console.log(`${firstItem} removed from the start of the lunch menu.`)
+        return array
+    }
+    else{
+        console.log(`No lunches to remove.`)
+    }
+}
+function getRandomLunch(array){
+    var numItems= array.length
+    if (numItems>0){
+            var randIndex= Math.floor(Math.random()*numItems)
+            console.log(`Randomly selected lunch: ${array[randIndex]}`)
+    }
+    else{
+        console.log("No lunches available.")
+    }
+}
+
+function showLunchMenu(array){
+    if (array.length>0){
+        console.log(`Menu items: ${array.join(", ")}`)
+    }
+    else{
+        console.log(`The menu is empty.`)
+    }
+}
+
+addLunchToEnd(lunches,"Hamburger")
+addLunchToStart(lunches,"Sausages")
+addLunchToEnd(lunches, "Indomie")
+addLunchToEnd(lunches, "Sushi")
+addLunchToEnd(lunches, "Pizza")
+addLunchToEnd(lunches, "Suya")
+addLunchToEnd(lunches, "Garri")
+removeLastLunch(lunches)
+showLunchMenu(lunches)
+
+lunches.splice()
