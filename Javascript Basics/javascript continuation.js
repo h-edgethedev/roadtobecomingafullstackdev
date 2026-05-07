@@ -361,4 +361,7 @@ addLunchToEnd(lunches, "Garri")
 removeLastLunch(lunches)
 showLunchMenu(lunches)
 
-lunches.splice()
+lunches.splice(4, 0, "Pounded yam and egusi", "Jollof rice and chicken")
+showLunchMenu(lunches)
+const shallowLunchMenu= lunches.slice()
+console.log(shallowLunchMenu)
