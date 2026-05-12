@@ -164,7 +164,7 @@ function validateManifest(manifest) {
             newobj.weight = mis
         }
         else {
-            if (typeof (manifest.weight) !== typeof (45) || manifest.weight < 1 || isNaN(manifest.weight)==true) {
+            if (typeof (manifest.weight) !== typeof (45) || manifest.weight < 1 || isNaN(manifest.weight) == true) {
                 newobj.weight = inv
             }
         }
@@ -204,14 +204,14 @@ console.log(validateManifest(plutoniumContainer))
 const cargomanifest0848 = {
     containerId: NaN,
     destination: "Santa Cruz",
-    weight: NaN ,
+    weight: NaN,
     unit: "pounds",
     hazmat: false
 }
 const cargomanifest0849 = {
     containerId: 27394,
     destination: " ",
-    weight: 84 ,
+    weight: 84,
     unit: "kg",
     hazmat: false
 }
@@ -219,3 +219,18 @@ const cargomanifest0849 = {
 console.log(validateManifest(cargomanifest0848))
 console.log(validateManifest(cargomanifest0849))
 
+function processManifest(manifest) {
+    if (Object.keys(validateManifest(manifest)).length == 0) {
+        console.log(`Validation success: ${manifest.containerId}`)
+        var newManifest = normalizeUnits(manifest)
+        console.log(`Total weight: ${newManifest.weight} kg`)
+    }
+    else{
+        console.log(`Validation error: ${manifest.containerId}`)
+        console.log(validateManifest(manifest))
+    }
+}
+
+processManifest({ containerId: 55, destination: "Carmel", weight: 400, unit: "lb", hazmat: false })
+
+processManifest({ containerId: -88, destination: "Soledad", weight: NaN })

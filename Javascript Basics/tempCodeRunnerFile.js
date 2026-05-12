@@ -1,2 +1,1 @@
-
-// console.log(typeof numObj); // "object"
+console.log(getMatchedWordCount(["Do", "not", "fear", "the", "dandy", "lion"], "dandy"))
