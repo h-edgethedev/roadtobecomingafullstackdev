@@ -91,3 +91,18 @@ var num= 5
 var factorial= factorialCalculator(num)
 var resultMsg= `Factorial of ${num} is ${factorial}`
 console.log(resultMsg)
+
+const greetingObject = new String("Hello, World!");
+console.log(greetingObject.length)
+const person = {
+  name: "John",
+  age: 30,
+  isStudent: true
+};
+
+console.log(person.toString());
+
+const fixedLengthArray= Array.from({length: 5})
+console.log(fixedLengthArray)
+var arrayOfSomeSort= new Array(5)
+console.log(arrayOfSomeSort)
