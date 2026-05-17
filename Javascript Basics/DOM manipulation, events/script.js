@@ -40,14 +40,38 @@ sectionE1.removeChild(lastParagraph)
 
 console.log(document.children)
 
-const para = document.getElementById("para")
-para.setAttribute("class", "my-class")
-console.log(`${para.outerHTML}`)
+// const para = document.getElementById("para")
+// para.setAttribute("class", "my-class")
+// console.log(`${para.outerHTML}`)
 
-const btn= document.getElementById("btn")
-btn.addEventListener("click", ()=>alert("You clicked the button"))
+var btn= document.getElementById("btn")
+// btn.addEventListener("click", ()=>alert("You clicked the button"))
 
 const input= document.getElementById("input")
 input.addEventListener("input", ()=>{
     console.log(input.value)
+})
+
+const bodyE1= document.querySelector("body")
+btn = document.getElementById("btn")
+
+let isBgColorGrey= true;
+
+function toggleBgColor(){
+    bodyE1.style.backgroundColor= isBgColorGrey ? "blue" : "grey"
+    isBgColorGrey= !isBgColorGrey
+}
+
+btn.addEventListener("click", toggleBgColor)
+
+function toggleBgColorOnHover(){
+    bodyE1.style.backgroundColor= isBgColorGrey ? "pink" : "orange"
+    isBgColorGrey= !isBgColorGrey
+}
+
+btn.addEventListener("mouseover", toggleBgColorOnHover)
+
+const para = document.getElementById("para")
+para.addEventListener("mouseover", ()=>{
+    btn.removeEventListener("click", toggleBgColor)
 })
