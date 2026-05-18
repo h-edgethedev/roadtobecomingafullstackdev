@@ -4,31 +4,31 @@
 // const sectionE1= document.querySelector("section")
 // console.log(sectionE1)
 
-const highlightE1= document.querySelector(".highlight");
+const highlightE1 = document.querySelector(".highlight");
 console.log(highlightE1)
 
-const matches= document.querySelectorAll("ul.ingredients li")
+const matches = document.querySelectorAll("ul.ingredients li")
 console.log(matches[0])
-const container= document.getElementById("container")
-container.innerHTML= "<ul><li><u>Cheese</u></li></ul>"
+const container = document.getElementById("container")
+container.innerHTML = "<ul><li><u>Cheese</u></li></ul>"
 
 const img = document.createElement("img")
-img.src= "/Images/krish-parmar-I70_S2OkWM4-unsplash.jpg"
-img.alt= "My future Lamborghini"
-img.style.height= "250px"
-img.style.width= "300px"
+img.src = "/Images/krish-parmar-I70_S2OkWM4-unsplash.jpg"
+img.alt = "My future Lamborghini"
+img.style.height = "250px"
+img.style.width = "300px"
 container.appendChild(img)
 
 const container2 = document.getElementById("container2")
 console.log(container2.textContent)
-container2.innerHTML= "<h2>👋 Hello I'm Heritage</h2>"
+container2.innerHTML = "<h2>👋 Hello I'm Heritage</h2>"
 
-const dessertsList= document.getElementById("desserts")
-const listItem= document.createElement("li")
-listItem.textContent= "Cookies"
+const dessertsList = document.getElementById("desserts")
+const listItem = document.createElement("li")
+listItem.textContent = "Cookies"
 dessertsList.appendChild(listItem)
-const sectionE1= document.getElementById("example-section");
-const lastParagraph= document.querySelector("#example-section p:last-of-type")
+const sectionE1 = document.getElementById("example-section");
+const lastParagraph = document.querySelector("#example-section p:last-of-type")
 console.log(lastParagraph)
 sectionE1.removeChild(lastParagraph)
 
@@ -44,34 +44,70 @@ console.log(document.children)
 // para.setAttribute("class", "my-class")
 // console.log(`${para.outerHTML}`)
 
-var btn= document.getElementById("btn")
+var btn = document.getElementById("btn")
 // btn.addEventListener("click", ()=>alert("You clicked the button"))
 
-const input= document.getElementById("input")
-input.addEventListener("input", ()=>{
+const input = document.getElementById("input")
+input.addEventListener("input", () => {
     console.log(input.value)
 })
 
-const bodyE1= document.querySelector("body")
+const bodyE1 = document.querySelector("body")
 btn = document.getElementById("btn")
 
-let isBgColorGrey= true;
+let isBgColorGrey = true;
 
-function toggleBgColor(){
-    bodyE1.style.backgroundColor= isBgColorGrey ? "blue" : "grey"
-    isBgColorGrey= !isBgColorGrey
+function toggleBgColor() {
+    bodyE1.style.backgroundColor = isBgColorGrey ? "blue" : "grey"
+    isBgColorGrey = !isBgColorGrey
 }
 
 btn.addEventListener("click", toggleBgColor)
 
-function toggleBgColorOnHover(){
-    bodyE1.style.backgroundColor= isBgColorGrey ? "pink" : "orange"
-    isBgColorGrey= !isBgColorGrey
+function toggleBgColorOnHover() {
+    bodyE1.style.backgroundColor = isBgColorGrey ? "pink" : "orange"
+    isBgColorGrey = !isBgColorGrey
 }
 
 btn.addEventListener("mouseover", toggleBgColorOnHover)
 
 const para = document.getElementById("para")
-para.addEventListener("mouseover", ()=>{
+para.addEventListener("mouseover", () => {
     btn.removeEventListener("click", toggleBgColor)
 })
+
+const menu = document.getElementById("menu")
+const togglebtn = document.getElementById("toggle-btn")
+togglebtn.addEventListener("click", () => menu.classList.toggle("show"))
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM is loaded.");
+});
+
+function changeImg() {
+    const img = document.getElementById("example-img")
+    img.src = "https://cdn.freecodecamp.org/curriculum/responsive-web-design-principles/FCCStickers-CamperBot200x200.jpg";
+    img.alt = "CamperBot sticker";
+    console.log("Image was just changed")
+}
+// changeImg()
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", changeImg)
+}
+
+else {
+    console.log("DOMContentLoaded has already been fired")
+    changeImg()
+}
+
+setTimeout(function () {
+    console.log("This runs after 10 seconds");
+}, 10000);
+
+const intervalId= setInterval(() => {
+    console.log("This runs every 5seconds")
+}, 5000);
+
+setTimeout(() => {
+    clearInterval(intervalId)
+}, 15000);
+
