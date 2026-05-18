@@ -35,3 +35,22 @@ button:hover {
 .menu.show {
   display: block;
 }
+
+body {
+  overflow-x: hidden;
+}
+
+.rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-size: 2rem;
+  position: absolute;
+  margin-top: 130px;
+}
+

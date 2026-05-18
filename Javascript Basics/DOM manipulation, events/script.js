@@ -103,7 +103,7 @@ setTimeout(function () {
     console.log("This runs after 10 seconds");
 }, 10000);
 
-const intervalId= setInterval(() => {
+const intervalId = setInterval(() => {
     console.log("This runs every 5seconds")
 }, 5000);
 
@@ -111,3 +111,34 @@ setTimeout(() => {
     clearInterval(intervalId)
 }, 15000);
 
+const rect = document.getElementById("rect")
+
+let position = 0
+
+function update() {
+    rect.style.left = position + "px"
+    position += 2
+    if (position > window.innerWidth) {
+        position = -rect.offsetHeight
+    }
+}
+
+function animate(){
+    update()
+
+    requestAnimationFrame(animate)
+}
+
+requestAnimationFrame(animate)
+
+// const square = document.querySelector("#square")
+
+// const animation = square.animate(
+//     [{ transform: "translateX(0px)" },{ transform: "translateX(100px)"}],
+//     {
+//         duration: 2000,
+//         iterations: Infinity,
+//         direction: "alternate",
+//         easing: "ease-in-out"
+//     }
+// )
