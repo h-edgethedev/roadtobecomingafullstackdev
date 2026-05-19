@@ -1,0 +1,43 @@
+body {
+    background-color: gray;
+    width: 70%;
+    margin: 30px auto;
+}
+
+.btn {
+    border-radius: 16px;
+    height: 55px;
+    width: 140px;
+    background: linear-gradient(135deg, rgb(81, 107, 255), #007bf0);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.25s ease;
+    display: block;
+    margin: 19px auto ;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.story-container {
+    border: 5px double black;
+    padding: 15px;
+    width: 80%;
+    margin: auto auto;
+    display: block;
+    color: white;
+}
+
+h1 {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.btn-container{
+    display: block;
+}
