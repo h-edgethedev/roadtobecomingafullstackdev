@@ -1,0 +1,14 @@
+.favorite-icon {
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+    background-color: none;
+  background: none;
+}
+
+.favorite-icon.filled {
+  color: blue;
+  background-color: none;
+  background: none;
+}
