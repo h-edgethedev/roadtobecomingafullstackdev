@@ -1,0 +1,31 @@
+main {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  border: 2px solid red;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  justify-content: space-between; 
+  align-items: stretch;
+}
+div {
+  width: 100px;           
+  border: 1px solid #888;
+  background-color: lightblue;
+}
+
+#first-div {
+  background-color: #4d70b2;
+}
+
+#second-div {
+  background-color: #5c4db2;
+}
+
+#third-div {
+  background-color: #4da3b2;
+}
+
+body{
+    background-color: black;
+}
