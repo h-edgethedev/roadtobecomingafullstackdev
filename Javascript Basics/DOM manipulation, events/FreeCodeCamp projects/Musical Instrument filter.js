@@ -19,19 +19,14 @@ const instrumentsArr= [
 var selectContainer= document.querySelector(".select-container")
 var productsContainer= document.querySelector("products-container")
 
+function instrumentCards(params) {
+    const instruments= params === "all"? instrumentsArr :
+    instrumentsArr.filter(({category}) => category=== params)
+    return instruments.map(({instruments, price}))
+}
+
 
 selectContainer.addEventListener("change", ()=>{
-    console.log(selectContainer.value)
+    console.log(instrumentCards(selectContainer.value))
 })
 
-function instrumentCards(params) {
-    if (selectContainer.value==="all"){
-        return instrumentsArr;
-    }
-
-    else{
-        const filteredInstruments= instrumentsArr.filter(function(instrument){
-            return instrumentsArr.cat
-        })
-    }
-}
