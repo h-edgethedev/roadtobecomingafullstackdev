@@ -3,7 +3,7 @@ const instrumentsArr = [
         category: "woodwinds",
         instrument: "Flute",
         price: 500
-    },  
+    },
     {
         category: "woodwinds",
         instrument: "Clarinet",
@@ -53,23 +53,20 @@ const instrumentsArr = [
 
 var selectContainer = document.querySelector(".select-container")
 var productsContainer = document.querySelector(".products-container")
-
 function instrumentCards(params) {
-    const instruments = params === "all" ? instrumentsArr :
+    const instruments = selectContainer.value === "all" ? instrumentsArr :
         instrumentsArr.filter(({ category }) => category === params)
 
     return instruments.map(({ instrument, price }) => {
         return `
-            <div class="card">
+        <div class="card">
             <h2>${instrument}</h2>
             <p>$${price}</p>
         </div>
-            `
-    }).join('')
+        `
+    }).join("")
 }
 
-
-selectContainer.addEventListener("change", (event) => {
-    productsContainer.innerHTML = instrumentCards(event.target.value)
+selectContainer.addEventListener("change", ()=>{
+    productsContainer.innerHTML= instrumentCards(selectContainer.value)
 })
-
