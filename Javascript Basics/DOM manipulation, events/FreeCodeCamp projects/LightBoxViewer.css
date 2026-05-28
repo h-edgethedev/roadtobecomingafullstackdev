@@ -1,0 +1,61 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+header {
+    background-color: cyan;
+    margin-bottom: 45px;
+    margin-top: 30px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.gallery {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 250px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.lightbox {
+    position: fixed;
+    height: 90%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    padding: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+
+button {
+    background: none;
+    font-size: 30px;
+    margin-top: -500px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+button:hover {
+    transform: scale(1.2) translateY(-5px);
+}
