@@ -5,17 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <button id="menuButton" aria-expanded="false" aria-controls="menuList">
-        Menu
-    </button>
+   <div role="tablist">
+  <button role="tab" id="tab1" aria-controls="section1" aria-selected="true">
+    Tab 1
+  </button>
+  <button role="tab" id="tab2" aria-controls="section2" aria-selected="false">
+    Tab 2
+  </button>
+  <button role="tab" id="tab3" aria-controls="section3" aria-selected="false">
+    Tab 3
+  </button>
+</div>
 
-    <ul id="menuList" hidden>
-        <li>List item 1</li>
-        <li>List item 2</li>
-    </ul>
+<div id="section1" role="tabpanel" aria-labelledby="tab1">
+  Section 1 content
+</div>
+
+<div id="section2" role="tabpanel" aria-labelledby="tab2" hidden>
+  Section 2 content
+</div>
+
+<div id="section3" role="tabpanel" aria-labelledby="tab3" hidden>
+  Section 3 content
+</div>
     <script src="script.js"></script>
 </body>
 

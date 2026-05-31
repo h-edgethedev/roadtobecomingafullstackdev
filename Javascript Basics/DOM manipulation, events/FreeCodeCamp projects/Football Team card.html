@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Team cards</title>
+    <link rel="stylesheet" href="Football Team card.css">
+</head>
+
+<body>
+    <main>
+        <div class="team-stats">
+            <h1>Team Stats</h1>
+            <p id="team">Team: </p>
+            <p id="head-coach"> Head coach: </p>
+            <p id="year">Year:</p>
+        </div>
+        <label for="players" class="options-label">Filter Teammates: </label>
+        <select name="players" id="players">
+            <option value="all">All Players</option>
+            <option value="forward">Postion Forward</option>
+            <option value="midfielder">Postion Midfielder</option>
+            <option value="defender">Position Defender</option>
+            <option value="goalkeeper">Goalkeeper</option>
+        </select>
+        <div class="cards" id="player-cards"></div>
+    </main>
+    <footer> &copy; H~Edge Studios</footer>
+    <script src="Football Team card.js"></script>
+</body>
+
+</html

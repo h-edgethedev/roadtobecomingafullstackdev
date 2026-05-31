@@ -1,8 +1,48 @@
-const button = document.getElementById("menuButton");
-const menu = document.getElementById("menuList");
+const tabs = document.querySelectorAll('[role="tab"]');
+const tabList = document.querySelector('[role="tablist"]');
 
-button.addEventListener("click", () => {
-  const expanded = button.getAttribute("aria-expanded") === "true";
-  button.setAttribute("aria-expanded", String(!expanded));
-  menu.hidden = expanded;
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    activateTab(tab);
+  });
+
+  tab.addEventListener('keydown', (e) => {
+    const key = e.key;
+    const currentIndex = Array.from(tabs).indexOf(tab);
+    let newIndex = null;
+
+    if (key === 'ArrowRight') {
+      newIndex = (currentIndex + 1) % tabs.length;
+    } else if (key === 'ArrowLeft') {
+      newIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    } else if (key === 'Home') {
+      newIndex = 0;
+    } else if (key === 'End') {
+      newIndex = tabs.length - 1;
+    }
+
+    if (newIndex !== null) {
+      tabs[newIndex].focus();
+      activateTab(tabs[newIndex]);
+    }
+  });
 });
+
+function activateTab(tab) {
+  const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+
+  tabs.forEach(t => {
+    t.setAttribute('aria-selected', 'false');
+    t.setAttribute('tabindex', '-1');
+  });
+
+  tabPanels.forEach(panel => panel.hidden = true);
+
+  tab.setAttribute('aria-selected', 'true');
+  tab.removeAttribute('tabindex');
+
+  const panelId = tab.getAttribute('aria-controls');
+  const panel = document.getElementById(panelId);
+  panel.hidden = false;
+  tab.focus();
+}
