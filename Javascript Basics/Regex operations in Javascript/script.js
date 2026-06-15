@@ -44,12 +44,43 @@ var end = /freeCodeCamp$/i
 
 // console.log(regex.test("We love Freecodecamping"))
 
-var regex = /freecodecamp/g
-var pattern= "freecodecamp"
-var str = "freecodecamp is the best we love freecodecamp"
+// var regex = /freecodecamp/g
+// var pattern= "freecodecamp"
+// var str = "freecodecamp is the best we love freecodecamp"
 // var match = str.match(regex)
 // var replaced = str.replace(regex, "FreeCodeCamp")
 // console.log(match)
 // console.log(replaced)
-const matched= str.matchAll(pattern)
-const replaced= str.replaceAll(pattern, "FreeCodeCamp")
+// const matched= str.matchAll(pattern)
+// const replaced= str.replaceAll(pattern, "FreeCodeCamp")
+// console.log(replaced)
+// console.log(Array.from(matched))
+
+// var regex = /free(?!code)/i
+// console.log(regex.test("freeCodeCamp"))
+// console.log(regex.test("free code camp"))
+// console.log(regex.test("I need someone for free to write code for me"))
+
+// regex= /(?<!free)code/i
+// console.log(regex.test("freeCodeCamp"))
+// console.log(regex.test("free code camp"))
+// console.log(regex.test("I need someone for free to write code for me"))
+// const regex = /free(?!code)/i;
+// console.log("freeCodeCamp".match(regex)); // null
+// console.log("free code camp".match(regex)); // ['code', index: 5, input: 'free code camp', groups: undefined]
+// console.log(
+//   "I need someone for free to write code for me".match(regex)
+// ); // ['code', index: 33, input: 'I need someone for free to write code for me', groups: undefined]
+
+// var regex = /^\d\d\d\d$/
+// regex = /^[a-zA-Z]+\d{4,6}$/
+// console.log('b123456'.match(regex))
+// console.log("d12345".match(regex))
+// console.log("aaa12345".match(regex))
+// console.log("12345".match(regex))
+
+var regex= /free(co+de)camp/i
+// console.log("freecodecamp".match(regex))
+// console.log("freecooooooooooooooooodecamp".replace(regex, "paid$1world"))
+
+regex= /free(co+de)camp.*free(co+de)camp/i
