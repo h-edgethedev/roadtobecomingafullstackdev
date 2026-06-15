@@ -83,4 +83,6 @@ var regex= /free(co+de)camp/i
 // console.log("freecodecamp".match(regex))
 // console.log("freecooooooooooooooooodecamp".replace(regex, "paid$1world"))
 
-regex= /free(co+de)camp.*free(co+de)camp/i
+regex= /free(co+de)camp.*free\1camp/i
+console.log(regex.test("freecooooodecamp is great i love freecooooodecamp")); // true
+console.log(regex.test("freecooooodecamp is great i love freecodecamp")); // false
