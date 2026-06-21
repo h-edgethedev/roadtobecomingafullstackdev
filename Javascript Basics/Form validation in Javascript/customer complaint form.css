@@ -2,8 +2,8 @@ body {
   background-size: 200% 200%;
   animation: drift 20s ease-in-out infinite;
   background:
-  radial-gradient(900px 600px at 18% 12%, rgba(124, 58, 237, 0.35), transparent 60%),
-  radial-gradient(800px 700px at 85% 88%, rgba(168, 85, 247, 0.28), transparent 60%),
+  radial-gradient(900px 600px at 18% 12%, rgba(58, 147, 237, 0.312), transparent 60%),
+  radial-gradient(800px 700px at 85% 88%, rgba(11, 18, 224, 0.28), transparent 60%),
   #0c0815;   
   height: 100vh;
 }
@@ -11,3 +11,9 @@ body {
   0%, 100% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
 }
+
+form, input{
+    display: block;
+    color: white;
+}
+

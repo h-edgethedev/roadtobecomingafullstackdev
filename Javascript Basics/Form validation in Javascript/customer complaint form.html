@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="customer complaint form.css">
 </head>
+
 <body>
-    <div class="card">
-      <p class="eyebrow">H~€DG€ Studios</p>
-      <h1 class="title">Mirror,&nbsp;mirror.</h1>
-      <p class="subtitle">Type a word or phrase. We strip the noise and read it both ways.</p>
+    <form>
+        <fieldset>
+            <label for="fullname">Full Name:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="John Doe" required>
 
-      <div class="field">
-        <label for="text-input" class="field-label">Text to check</label>
-        <div class="field-row">
-          <input
-            id="text-input"
-            type="text"
-            placeholder="e.g. never odd or even"
-            autocomplete="off"
-            spellcheck="false"
-            value="Heritage is a boy"
-          />
-          <button id="check-btn" type="button">Check</button>
-        </div>
-      </div>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="example@domain.com" required>
+        </fieldset>
+        <hr>
 
-      <div id="result" class="result" aria-live="polite"></div>
-    </div>
+        <fieldset>
+            <label for="order">Order No:</label>
+            <input type="number" required placeholder="2024######>
+            <label for=" product-code">Product Code: </label>
+            <input type="text" id="product-code" required name="product-code">
+            <label for="quantity">Quantity: </label>
+            <input type="number" name="quantity" id="quantity">
+        </fieldset>
+
+        <fieldset id="complaints-group">
+            <legend>Complaint Reason: </legend>
+            <label>
+                <input type="checkbox" value="Damaged Product">
+                Damaged Product
+            </label>
+
+            <label>
+                <input type="checkbox" value="Nonconforming Product">
+                Nonconforming Product
+            </label>
+            <label>
+                <input type="checkbox" value="Delayed Dispatch">
+                Delayed Dispatch
+            </label>
+        </fieldset>
+    </form>
 
     <script src="customer complaint form.js"></script>
 </body>
+
 </html>
