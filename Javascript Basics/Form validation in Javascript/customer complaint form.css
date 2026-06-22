@@ -6,14 +6,59 @@ body {
   radial-gradient(800px 700px at 85% 88%, rgba(11, 18, 224, 0.28), transparent 60%),
   #0c0815;   
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @keyframes drift {
   0%, 100% { background-position: 0% 0%; }
   50% { background-position: 100% 100%; }
 }
 
-form, input{
-    display: block;
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
     color: white;
 }
 
+#form {
+  color: whitesmoke;
+    max-width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+}
+
+input {
+    border-color: rgb(118, 118, 118);
+}
+
+#personal-info input, #product-info input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+fieldset {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-color: rgb(118, 118, 118);
+}
+
+textarea {
+    width: 100%;
+    border-color: rgb(118, 118, 118);
+}
+
+#btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submit-btn, #clear-btn {
+    margin: 10px 15px 0;
+}
