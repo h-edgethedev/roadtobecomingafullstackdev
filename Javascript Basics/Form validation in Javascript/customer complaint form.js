@@ -17,20 +17,28 @@ const checkOrderNo = () => /^2024\d{6}$/.test(orderNo.value)
 const checkProdCode = () => /^[a-zA-Z]{2}\d{2}-[a-zA-Z]\d{3}-[a-zA-Z]{2}\d$/.test(productCode.value)
 const checkQuantity = () => {
     const n = Number(quantity.value)
-    return quantity.value !== "" && Number.isInteger(n) &&  n > 0
+    return quantity.value !== "" && Number.isInteger(n) && n > 0
 }
 
-const checkComplaintsGroup = () => 
+const checkComplaintsGroup = () =>
     [...complaintsGrp.querySelectorAll("input[type='checkbox']")].some((c) => c.checked)
 
 
 const checkComplaintDescription = () => !otherComplaint.checked || complaintDesc.value.length >= 20
 
-const checkSolution = () => 
+const checkSolution = () =>
     [...solutionGrp.querySelectorAll("input[type='radio']")].some((r) => r.checked)
 
 const checkSolutionDescription = () => {
-    !otherSolution.checked || solutionDesc.value.length >= 20
+    if (otherSolution.checked == true && solutionDesc.value.length >= 20) {
+        return true
+    }
+    else if (otherSolution.checked == false && solutionDesc.value.length <= 20) {
+        return true
+    }
+    else if (otherSolution.checked == true && solutionDesc.value.length <= 20) {
+        return false
+    }
 }
 
 function validateForm() {
@@ -61,9 +69,9 @@ orderNo.addEventListener("change", () => setBorder(orderNo, checkOrderNo()))
 productCode.addEventListener("change", () => setBorder(productCode, checkProdCode()))
 quantity.addEventListener("change", () => setBorder(quantity, checkQuantity()))
 complaintsGrp.addEventListener("change", () => setBorder(complaintsGrp, checkComplaintsGroup()))
-complaintDesc.addEventListener("change",()=> setBorder(complaintDesc, checkComplaintDescription()))
-solutionGrp.addEventListener("change",()=> setBorder(solutionGrp, checkSolution()))
-solutionDesc.addEventListener("change",()=> setBorder(solutionDesc, checkSolutionDescription()))
+complaintDesc.addEventListener("change", () => setBorder(complaintDesc, checkComplaintDescription()))
+solutionGrp.addEventListener("change", () => setBorder(solutionGrp, checkSolution()))
+solutionDesc.addEventListener("change", () => setBorder(solutionDesc, checkSolutionDescription()))
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -79,22 +87,24 @@ form.addEventListener("submit", (e) => {
         setBorder(solutionGrp, result["solutions-group"]);
         setBorder(solutionDesc, result["solution-description"]);
     }
-})  
+})
 
-const complaintBox = document.getElementById("complaint-description-container");
-const solutionBox = document.getElementById("solution-description-container");
+// const complaintBox = document.getElementById("complaint-description-container");
+// const solutionBox = document.getElementById("solution-description-container");
 
-// hide both at the start
-complaintBox.style.display = "none";
-solutionBox.style.display = "none";
+// // hide both at the start
+// complaintBox.style.display = "none";
+// solutionBox.style.display = "none";
 
-// complaint "Other" is a checkbox — listen on it directly
-otherComplaint.addEventListener("change", () => {
-  complaintBox.style.display = otherComplaint.checked ? "block" : "none";
-});
+// // complaint "Other" is a checkbox — listen on it directly
+// otherComplaint.addEventListener("change", () => {
+//     complaintBox.style.display = otherComplaint.checked ? "block" : "none";
+// });
 
-// solution "Other" is a radio — picking another radio unchecks it,
-// so listen on the whole group and re-check each time
-solutionGrp.addEventListener("change", () => {
-  solutionBox.style.display = otherSolution.checked ? "block" : "none";
-});
+// // solution "Other" is a radio — picking another radio unchecks it,
+// // so listen on the whole group and re-check each time
+// solutionGrp.addEventListener("change", () => {
+//     solutionBox.style.display = otherSolution.checked ? "block" : "none";
+// });
+
+const complaintBox = document.getElementById()
