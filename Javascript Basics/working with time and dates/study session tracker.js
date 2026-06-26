@@ -8,7 +8,10 @@ var sessionActive = false
 var calcStartTime = 0
 var endTime = 0;
 var calcEndTime = 0
+var statusLabel = document.getElementById("statusLabel")
+var liveClock = document.getElementById("liveClock")
 
+var timerInterval;
 
 
 startButton.addEventListener("click", () => {
@@ -20,16 +23,28 @@ startButton.addEventListener("click", () => {
     startButton.disabled = true
     endTimeElement.textContent = "—"
     endButton.disabled = false
-})
-
-
-function calculateDuration() {
-    var timeDifference = calcEndTime - calcStartTime
+    statusLabel.textContent = "Session in Progress"
+    
+    timerInterval = setInterval(() => {
+    var newTime = new Date()
+    var timeDifference = newTime - calcStartTime
     var totalSeconds = timeDifference / 1000
     var hrs = Math.floor(totalSeconds / 3600)
     var leftovers = totalSeconds % 3600
     var minutes = Math.floor(leftovers / 60)
-    seconds = leftovers % 60
+    var seconds = Math.floor(leftovers % 60)
+    liveClock.textContent = `${hrs}: ${minutes}:${seconds}`
+}, 1000)
+})
+
+
+function calculateDuration(startIme, Endtime) {
+    var timeDifference = Endtime - startIme
+    var totalSeconds = timeDifference / 1000
+    var hrs = Math.floor(totalSeconds / 3600)
+    var leftovers = totalSeconds % 3600
+    var minutes = Math.floor(leftovers / 60)
+    var seconds = Math.floor(leftovers % 60)
     return `${hrs}hr ${minutes}m ${seconds}s`
 }
 
@@ -42,9 +57,10 @@ endButton.addEventListener("click", () => {
     startButton.disabled = false
     statusIndicator.classList.remove("active")
     calcEndTime = new Date()
-    var duration = calculateDuration()
+    var duration = calculateDuration(calcStartTime, calcEndTime)
     var date = currentTime.toLocaleDateString()
     var entry = document.createElement("div")
+    statusLabel.textContent = "No active session"
     entry.classList.add("session-entry")
 
     entry.innerHTML = `
@@ -56,6 +72,8 @@ endButton.addEventListener("click", () => {
         `
     document.getElementById("historyList").prepend(entry)
     console.log(calcEndTime - calcStartTime)
+    clearInterval(timerInterval)
+    
 })
 
 
