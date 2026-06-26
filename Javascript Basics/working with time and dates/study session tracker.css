@@ -1,0 +1,12 @@
+body{
+    width: 25%;
+    margin: auto;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.buttons-div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row ;
+}
