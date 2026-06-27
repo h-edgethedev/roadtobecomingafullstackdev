@@ -24,17 +24,17 @@ startButton.addEventListener("click", () => {
     endTimeElement.textContent = "—"
     endButton.disabled = false
     statusLabel.textContent = "Session in Progress"
-    
+
     timerInterval = setInterval(() => {
-    var newTime = new Date()
-    var timeDifference = newTime - calcStartTime
-    var totalSeconds = timeDifference / 1000
-    var hrs = Math.floor(totalSeconds / 3600)
-    var leftovers = totalSeconds % 3600
-    var minutes = Math.floor(leftovers / 60)
-    var seconds = Math.floor(leftovers % 60)
-    liveClock.textContent = `${hrs}: ${minutes}:${seconds}`
-}, 1000)
+        var newTime = new Date()
+        var timeDifference = newTime - calcStartTime
+        var totalSeconds = timeDifference / 1000
+        var hrs = Math.floor(totalSeconds / 3600)
+        var leftovers = totalSeconds % 3600
+        var minutes = Math.floor(leftovers / 60)
+        var seconds = Math.floor(leftovers % 60)
+        liveClock.textContent = `${hrs}: ${minutes}:${seconds}`
+    }, 1000)
 })
 
 
@@ -73,7 +73,6 @@ endButton.addEventListener("click", () => {
     document.getElementById("historyList").prepend(entry)
     console.log(calcEndTime - calcStartTime)
     clearInterval(timerInterval)
-    
 })
 
 
