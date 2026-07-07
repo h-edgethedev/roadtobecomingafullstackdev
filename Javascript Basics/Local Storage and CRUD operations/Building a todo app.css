@@ -1,12 +1,4 @@
-:root {
-  --white: #fff;
-  --light-grey: #f5f6f7;
-  --dark-grey: #0a0a23;
-  --yellow: #f1be32;
-  --golden-yellow: #feac32;
-}
-
-*,
+,
 *::before,
 *::after {
   margin: 0;
@@ -62,7 +54,7 @@ h1 {
   width: 80%;
   font-size: 1.2rem;
   align-self: center;
-  justify-self: center;
+  justify-self: center; 
 }
 
 .close-task-form-btn {
@@ -71,10 +63,7 @@ h1 {
   cursor: pointer;
 }
 
-.close-icon {
-  width: 20px;
-  height: 20px;
-}
+
 
 .task-form {
   display: flex;
