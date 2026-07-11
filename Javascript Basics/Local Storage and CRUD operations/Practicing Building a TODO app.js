@@ -39,7 +39,7 @@ const addOrUpdateTask = () => {
     reset()
 }
 
-openTaskFormBtn.addEventListener("click", () => {
+openTaskFormBtn.addEventListener("click", () => {   
     taskForm.classList.toggle("hidden")
 })
 
