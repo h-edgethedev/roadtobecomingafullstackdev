@@ -41,15 +41,49 @@
 
 // fetchUserData();
 
-navigator.geolocation.getCurrentPosition(
-    (position)=>{
-        console.log(`Latitude: ${position.coords.latitude}`)
-        console.log(`Longitude: ${position.coords.longitude}`)
-        console.log(`Accuracy: ${position.coords.accuracy}`)
-    },
-    (error)=>{
-        console.log(`Error: ${error.message}`)
-    }
-)
+const authorContainer = document.getElementById("author-container")
+const loadMoreBtn = document.getElementById("load-more-btn")
+var authorDataArr = []
+let startingIndex = 0
+let endingIndex = 8
 
-console.log("Location available")
+const initialFetch = async () => {
+    try {
+        const res = await fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
+        authorDataArr = await res.json()
+        displayAuthors(authorDataArr.slice(startingIndex, endingIndex))
+    } catch (error) {
+        authorContainer.innerHTML = `<p class= "error-msg">There was an error loading the authors</p>`
+    }
+}
+
+initialFetch()
+
+const fetchMoreAuthors = () => {
+    startingIndex += 8
+    endingIndex += 8
+    displayAuthors(authorDataArr.slice(startingIndex, endingIndex))
+    if (authorDataArr.length <= endingIndex) {
+        loadMoreBtn.disabled = true
+        loadMoreBtn.textContent = "No more data to load"
+        loadMoreBtn.style.cursor = "not-allowed"
+    }
+}
+
+
+const displayAuthors = (authors) => {
+    authors.forEach(({ author, image, url, bio }, index) => {
+        authorContainer.innerHTML += `
+        <div id= "${index}" class= "user-card">
+        <h2 class= "author-name">${author}</h2>
+        <div class= "Purple Divider"></div>
+        <img src="${image}" alt="${author} avatar" class="user-img">
+        <p class= "bio">${bio.length > 50 ? bio.slice(0, 50) + "..." : bio}</p>
+        <a href="${url}" class="author-link" target="_blank">${author}'s author page</a>
+        </div>
+        `
+        console.log(index)
+    })
+}
+
+loadMoreBtn.addEventListener("click", fetchMoreAuthors)
